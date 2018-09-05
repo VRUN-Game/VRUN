@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1921830420363864}
+  m_IsPrefabParent: 1
+--- !u!1 &1921830420363864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4852403938904428}
+  - component: {fileID: 114851288416860302}
+  - component: {fileID: 114595240950691752}
+  - component: {fileID: 114874127568256082}
+  - component: {fileID: 114086302173411988}
+  - component: {fileID: 114914053385307218}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4852403938904428
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921830420363864}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114086302173411988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921830420363864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3b06199e37548068d1ab678c3d6746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundSourcesList:
+  - Name: MenuSound
+    AudioClip: {fileID: 0}
+  - Name: GameSound
+    AudioClip: {fileID: 8300000, guid: c5f37d4e04daedf47ab21b8f142c009b, type: 3}
+  - Name: GameEndSound
+    AudioClip: {fileID: 0}
+  - Name: HitSound
+    AudioClip: {fileID: 8300000, guid: 25dd5a7f18c061a47887018ea8a0cf82, type: 3}
+  - Name: CollectScoreObj
+    AudioClip: {fileID: 8300000, guid: fc416eb4606329c4faa2c262f2b1b9c0, type: 3}
+  - Name: TimerTickSound
+    AudioClip: {fileID: 8300000, guid: 0ce2ed18383c7a84aa93cb258d7ea34a, type: 3}
+  - Name: Faster
+    AudioClip: {fileID: 8300000, guid: 0469b26ae4402d74a927bc9849f08902, type: 3}
+  - Name: Stone
+    AudioClip: {fileID: 8300000, guid: f0f335812b58b7343ad06a63f37909ae, type: 3}
+--- !u!114 &114595240950691752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921830420363864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcfe9657b22274845a97e8f70a72f49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114851288416860302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921830420363864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b37ddeade0bfe4d8eb24402b00ce61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114874127568256082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921830420363864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b547bfd90b4c17856a790ea0f6c4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114914053385307218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921830420363864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac4302077b66484f9788dad3c317be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
