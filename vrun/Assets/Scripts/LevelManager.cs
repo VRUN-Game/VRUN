@@ -33,7 +33,7 @@ public class LevelManager : MonoBehaviour
     private void LoadSceneAsync(String sceneName)
     {
 		EventManager.StopLevelSound();
-        StartCoroutine(LoadActionsAsync(sceneName));
+        StartCoroutine(LoadSceneCoroutine(sceneName));
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     /// <param name="sceneName">Name der Scene, die geladen werden soll</param>
     /// <returns>IEnumator</returns>
-    private IEnumerator LoadActionsAsync(String sceneName)
+    private IEnumerator LoadSceneCoroutine(String sceneName)
     {
         yield return StartCoroutine(TransitionCtrl.ShowTransition());
         yield return StartCoroutine(LoadAsyncScene(sceneName));

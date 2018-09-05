@@ -91,7 +91,8 @@ public class ScoreTableCtrl : MonoBehaviour
     }
     
     /// <summary>
-    /// Funktion, speichert bei Aufruf die Punktetabelle. 
+    /// Funktion, speichert bei Aufruf die Punktetabelle. Ist ein Unity Callback, welcher ausgeführt wird,
+    /// sobald die Anwendung geschlossen wird.
     /// </summary>
     void OnApplicationQuit()
     {

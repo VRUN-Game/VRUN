@@ -2948,29 +2948,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    \  \r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-    molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
-    accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
-    duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
-    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-    aliquam erat volutpat.   \r\n\r\nUt wisi enim ad minim veniam, quis nostrud exerci
-    tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-    consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
-    et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-    dolore te feugait nulla facilisi.   \r\n\r\nNam liber tempor cum soluta nobis
-    eleifend option congue nihil imperdiet doming id quod mazim placerat facer"
+  m_Text: "VRUN\n\nDeveloper:\nDanesh Wohlfart\nGiuseppe Rizzo\n\nSounds:\nLobby:\nDivider
+    von Chris Zabriskie ist unter der Lizenz \"Creative Commons Attribution\" (https://creativecommons.org/licenses/by/4.0/)
+    lizenziert.\r\nQuelle: http://chriszabriskie.com/divider/\r\nK\xFCnstler: http://chriszabriskie.com/\n\nLevel
+    2:\nElectro Sketch by Kevin MacLeod is licensed under a Creative Commons Attribution
+    license (https://creativecommons.org/licenses/by/4.0/) \r\nSource: http://incompetech.com/music/royalty-free/?keywords=electro+sketch&Search=Search
+    \r\nArtist: http://incompetech.com/\n\nLevel 3:\nChee Zee Jungle - Primal Drive
+    by Kevin MacLeod is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/by/4.0/)
+    \r\nSource: http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100684
+    \r\nArtist: http://incompetech.com/ \n\n\nSpecial thanks to:\n\nDavid M\xFChlhausen
+    creator of all 3D objects\n\nArnaud Briche creator of the VRSF\n(github.com/Jamy4000/VR-Scriptable-Framework)\n\nCopyright
+    FH Wedel 2018\n"
 --- !u!222 &1494682390
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -7,7 +7,6 @@
 public class ScoreHandler : MonoBehaviour
 {
     private static int _score; //Score Wert 
-    private static int _coinAddition = 10; //Erhöhung beim Einsammeln eines Coins
 
     /// <summary>
     /// Funktion, wird von Unity aufgerufen, wenn das dazugehörige GameObject aktiviert wird.
@@ -55,7 +54,7 @@ public class ScoreHandler : MonoBehaviour
     /// </summary>
     private static void CoinCollected()
     {
-        IncreasePlayerScore(GlobalDataHandler.IsMultiplierActive() ? 2 * _coinAddition : _coinAddition);
+        IncreasePlayerScore(GlobalDataHandler.IsMultiplierActive() ? 2 * GlobalDataHandler.CoinAddition: GlobalDataHandler.CoinAddition);
     }
 
     /// <summary>

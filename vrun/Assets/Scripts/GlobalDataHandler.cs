@@ -34,6 +34,8 @@ public class GlobalDataHandler : MonoBehaviour
     public const float SpeedAdditionPerMileStone = 10f; //Geschwindigkeitszusatz nach Erreichen eines Meilensteins
     public static float StartSpeed = 20; // Anfangsgeschwindigkeit des Spielers
     public static int TrackWidth = 6; // Gesamtbreite der Strecke
+    public static int CoinAddition = 10; //Erhöhung beim Einsammeln eines Coins
+
 
     private static int _nextMilestone; // z-Position des nächsten Meilensteins
     private static bool _gameModus; // Game-Modus 

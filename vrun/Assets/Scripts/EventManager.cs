@@ -15,49 +15,43 @@ public class EventManager : MonoBehaviour
     //GameStartEvent
     public delegate void GameStartEvent();
     public static event GameStartEvent GameStartEventMethods;
-
-    //GameEndEvent
-    public delegate void GameEndEvent();
-    public static event GameEndEvent GameEndEventMethods;
-
-    //GameResetEvent
-    public delegate void GameResetEvent();
-    public static event GameResetEvent GameResetEventMethods;
-    
-    //Load new scene
-    public delegate void LoadNewSceneEvent(String sceneName);
-    public static event LoadNewSceneEvent LoadNewSceneEventMethods;
-
-    public delegate void LevelIsLoadedEvent();
-    public static event LevelIsLoadedEvent LevelIsLoadedEventMethods;
-
     public static void GameStart()
     {
         if (GlobalDataHandler.GetGameModus()) return;
         if (GameStartEventMethods != null) GameStartEventMethods();
     }
 
+    //GameEndEvent
+    public delegate void GameEndEvent();
+    public static event GameEndEvent GameEndEventMethods;
+
     public static void GameEnd()
     {
         if (GameEndEventMethods != null) GameEndEventMethods();
     }
-
+    //GameResetEvent
+    public delegate void GameResetEvent();
+    public static event GameResetEvent GameResetEventMethods;
     public static void GameReset()
     {
         if (GameResetEventMethods != null) GameResetEventMethods();
     }
-    
+    //Load new scene
+    public delegate void LoadNewSceneEvent(String sceneName);
+    public static event LoadNewSceneEvent LoadNewSceneEventMethods;
     public static void SwitchScene(string sceneName)
     {
         if (LoadNewSceneEventMethods != null) LoadNewSceneEventMethods(sceneName);
     }
 
+    public delegate void LevelIsLoadedEvent();
+    public static event LevelIsLoadedEvent LevelIsLoadedEventMethods;
     public static void LevelIsLoaded()
     {
-		PlayLevelSound(SceneManager.GetActiveScene().name);
+        PlayLevelSound(SceneManager.GetActiveScene().name);
         if (LevelIsLoadedEventMethods != null) LevelIsLoadedEventMethods();
     }
-
+   
     public delegate void StartRunningEvent();
 
     public static event StartRunningEvent StartRunningEventMethods;
@@ -75,11 +69,19 @@ public class EventManager : MonoBehaviour
     public delegate void EnterCtrlPointEvent();
 
     public static event EnterCtrlPointEvent EnterCtrlPointEventMethods;
+    public static void EnterCtrlPoint()
+    {
+        if (EnterCtrlPointEventMethods != null) EnterCtrlPointEventMethods();
+    }
 
     // Leaving the Controllpoint
     public delegate void LeaveCtrlPointEvent();
 
     public static event LeaveCtrlPointEvent LeaveCtrlPointEventMethods;
+    public static void LeaveCtrlPoint()
+    {
+        if (LeaveCtrlPointEventMethods != null) LeaveCtrlPointEventMethods();
+    }
     
     // Event for resetting the player if he hits an obstacle in the tutorial
     public delegate void TutorialObstacleHitEvent(float posZ);
@@ -100,16 +102,6 @@ public class EventManager : MonoBehaviour
 	{
 	    if (ResetInventoryEventMethods != null) ResetInventoryEventMethods();
 	}
-
-	public static void EnterCtrlPoint()
-	{
-	    if (EnterCtrlPointEventMethods != null) EnterCtrlPointEventMethods();
-	}
-
-    public static void LeaveCtrlPoint()
-    {
-        if (LeaveCtrlPointEventMethods != null) LeaveCtrlPointEventMethods();
-    }
 
     /**
      * Game events handling the gameplay states while player is actually playing the game.
@@ -190,19 +182,6 @@ public class EventManager : MonoBehaviour
 		if (StopLevelSoundEventMethods != null) StopLevelSoundEventMethods();
 	}
 
-	/**
-     * Display events handling the appearence of the Screens
-     */
-	//    //Display Startmenu
-	//    public delegate void DisplayStartmenuEvent();
-	//
-	//    public static event DisplayStartmenuEvent DisplayStartmenuEventMethods;
-	//
-	//    //Display Endmenu
-	//    public delegate void DisplayEndmenuEvent();
-	//
-	//    public static event DisplayEndmenuEvent DisplayEndmenuEventMethods;
-
 	//Update Timer Display ingame
 	public delegate void UpdateTimerDisplayEvent();
 
@@ -242,6 +221,7 @@ public class EventManager : MonoBehaviour
         if (ActivateTimerEventMethods != null) ActivateTimerEventMethods();
     }
 
+    // Kommentar
     public delegate void MuteAudioEvent();
 
     public static event MuteAudioEvent MuteAudioEventMethods;
