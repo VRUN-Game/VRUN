@@ -33,7 +33,7 @@ public class ControllerCollider : MonoBehaviour {
     /// </summary>
     private void SearchForObjctCtrl()
     {
-		if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "HomeScene") return;
+		if (GlobalDataHandler.GetActualSceneName() == "Tutorial" || GlobalDataHandler.GetActualSceneName() == "HomeScene") return;
         _objList = GameObject.Find("ObjectList").GetComponent<ObjectList>();
     }
 
@@ -52,7 +52,7 @@ public class ControllerCollider : MonoBehaviour {
             
             //Fügt dem Inventar hinzu bis die Punkte oben am Score angekommen sind 
             other.transform.parent = InventoryHandler.transform;
-            if (SceneManager.GetActiveScene().name != "Tutorial")
+            if (GlobalDataHandler.GetActualSceneName() != "Tutorial")
                 _objList.RemoveFromList(other.gameObject);
         }
     }

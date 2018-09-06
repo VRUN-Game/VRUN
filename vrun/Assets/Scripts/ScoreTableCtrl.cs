@@ -16,7 +16,6 @@ public class ScoreTableCtrl : MonoBehaviour
     /// </summary>
     private void OnEnable()
     {
-        EventManager.GameExitEventMethods += SaveScoreTable;
         EventManager.GameEndEventMethods += PushNewScoreToTable;
     }
 
@@ -26,7 +25,6 @@ public class ScoreTableCtrl : MonoBehaviour
     /// </summary>
     private void OnDisable()
     {
-        EventManager.GameExitEventMethods -= SaveScoreTable;
         EventManager.GameEndEventMethods -= PushNewScoreToTable;
     }
 

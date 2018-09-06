@@ -34,7 +34,7 @@ public class PlayerCollider : MonoBehaviour
     /// </summary>
     private void SearchForObjctCtrl()
     {
-        if (SceneManager.GetActiveScene().name == "Tutorial" || SceneManager.GetActiveScene().name == "HomeScene") return;
+        if (GlobalDataHandler.GetActualSceneName() == "Tutorial" || GlobalDataHandler.GetActualSceneName() == "HomeScene") return;
         _objList = GameObject.Find("ObjectList").GetComponent<ObjectList>();
     }
 
@@ -63,14 +63,14 @@ public class PlayerCollider : MonoBehaviour
             // Einsammeln eines Collectibles 
             case "Collectible":
                 InventoryHandler.AddItem(other.gameObject);
-                if (SceneManager.GetActiveScene().name != "Tutorial")
+                if (GlobalDataHandler.GetActualSceneName() != "Tutorial")
                     _objList.RemoveFromList(other.gameObject);
                 break;
             // Kollisonsbehandlung mit einem Hindernis der Level
             case "Obstacle":
                 EventManager.HitObstacleObjectCollected();
                 EventManager.GameEnd();
-                if (SceneManager.GetActiveScene().name != "Tutorial")
+                if (GlobalDataHandler.GetActualSceneName() != "Tutorial")
                     _objList.RemoveItem(other.gameObject);
                 break;
             // Einsammeln eines Coins
@@ -78,7 +78,7 @@ public class PlayerCollider : MonoBehaviour
                 EventManager.ScoreObjectCollected();
                 //Fügt dem Inventar hinzu bis die Punkte oben am Score angekommen sind 
                 other.transform.parent = InventoryHandler.transform;
-                if (SceneManager.GetActiveScene().name != "Tutorial")
+                if (GlobalDataHandler.GetActualSceneName() != "Tutorial")
                     _objList.RemoveFromList(other.gameObject);
                 break;
             // Kollisonsbehandlung mit einem Hindernis in dem Tutorial
@@ -88,7 +88,7 @@ public class PlayerCollider : MonoBehaviour
                 break;
             // Durchlaufen eines Portals
             case "Portal":
-                if (SceneManager.GetActiveScene().name == "Tutorial")
+                if (GlobalDataHandler.GetActualSceneName() == "Tutorial")
                 {
                     EventManager.DeleteVrStuff();
                 }

@@ -201,8 +201,8 @@ public class SoundCtrl : MonoBehaviour
 
     private void StopInGameSound()
     {
-        if (string.IsNullOrEmpty(SceneManager.GetActiveScene().name)) throw new ArgumentException("name", "Value cannot be null or empty.");
-        StartCoroutine(FadeOut(_soundSources[SceneManager.GetActiveScene().name], .5f));
+        if (string.IsNullOrEmpty(GlobalDataHandler.GetActualSceneName())) throw new ArgumentException("name", "Value cannot be null or empty.");
+        StartCoroutine(FadeOut(_soundSources[GlobalDataHandler.GetActualSceneName()], .5f));
     }
 
     /// <summary>

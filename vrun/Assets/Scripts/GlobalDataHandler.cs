@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using VRSF.Utils;
 
+//Typen zur definition der aktuellen Laufmodi sowie des Typs des eingesammelten Objekts
 namespace NewTypes
 {
     public enum RunMode
@@ -122,7 +123,7 @@ public class GlobalDataHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Stellt alle Variablen in ihren Ursprungszustand zurück.
     /// </summary>
     private static void ResetGlobalData()
     {
@@ -135,7 +136,7 @@ public class GlobalDataHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// Gibt die x-Positionen der Strecken wieder.
+    /// Gibt die x-Positionen eines Streckenabschnitts zurück.
     /// </summary>
     /// <returns>Array mit dem Streckenwerten</returns>
     public static int[] GetLanePositions()
@@ -143,114 +144,194 @@ public class GlobalDataHandler : MonoBehaviour
         return LanePositions;
     }
 
+    /// <summary>
+    /// Gibt die Position des nächsten Meilensteins zurück.
+    /// </summary>
+    /// <returns></returns>
     public static int GetNextMilestone()
     {
         return _nextMilestone;
     }
 
+    /// <summary>
+    /// Gibt den aktuellen Laufmodus zurück.
+    /// </summary>
+    /// <returns></returns>
     public static RunMode GetRunMode()
     {
         return _runMode;
     }
 
+    /// <summary>
+    /// Setzt den aktuellen Laufmodus auf den übergebenen Wert.
+    /// </summary>
+    /// <param name="mode">Modus vom Typ RunMode der gespeichert werden soll.</param>
     public static void SetRunMode(RunMode mode)
     {
         _runMode = mode;
     }
 
+    /// <summary>
+    /// Gibt die initiale Laufgeschwindigkeit zurück.
+    /// </summary>
+    /// <returns></returns>
     public static float GetSpeed()
     {
         return _baseSpeed;
     }
 
+    /// <summary>
+    /// Setzt die Laufgeschwindigkeit des Spielers.
+    /// </summary>
+    /// <param name="speed"></param>
     public static void SetPlayerspeed(float speed)
     {
         _playerSpeed = speed;
     }
 
+    /// <summary>
+    /// Gibt die Laufgeschwindigkeit des Spielers zurück.
+    /// </summary>
+    /// <returns></returns>
     public static float GetPlayerspeed()
     {
         return _playerSpeed;
     }
 
-    /**
-     * Returns the Z value of the player position.
-     */
+    /// <summary>
+    /// Gibt die Z-Position des Spielers zurück.
+    /// </summary>
+    /// <returns></returns>
     public static float GetPlayerPosition()
     {
         return PlayerCtrl.GetPlayerZPosition();
     }
 
+    /// <summary>
+    /// Gibt zurück ob der Punktemultiplier aktiv ist.
+    /// </summary>
+    /// <returns>Ob der Multiplier aktiv ist.</returns>
     public static bool IsMultiplierActive()
     {
         return _isMultiplierActive;
     }
 
+    /// <summary>
+    /// Setzt den Punktemultiplier.
+    /// </summary>
+    /// <param name="value">True oder false</param>
     public static void SetMultiplierActive(bool value)
     {
         _isMultiplierActive = value;
     }
 
+    /// <summary>
+    /// Gibt zurück ob das Spiel aktiv ist.
+    /// </summary>
+    /// <returns>True oder False</returns>
     public static bool GetGameModus()
     {
         return _gameModus;
     }
 
+    /// <summary>
+    /// Setzt den Status ob das Spiel aktiv ist.
+    /// </summary>
+    /// <param name="value">True oder false</param>
     private static void SetGameModus(bool value)
     {
         _gameModus = value;
     }
 
+    /// <summary>
+    /// Wechselt den Kollisionsstatus, fürs debugging.
+    /// </summary>
     public static void ToggleCollisionState()
     {
         _collision = !_collision;
     }
 
+    /// <summary>
+    /// Gibt den aktuellen Kollisionsstatus zurück.
+    /// </summary>
+    /// <returns>True oder false</returns>
     public static bool GetCollisionState()
     {
         return _collision;
     }
 
+    /// <summary>
+    /// Startet die bewegung des Spielers.
+    /// </summary>
     public static void StartPlayer()
     {
         SetRunMode(RunMode.Normal);
     }
     
+    /// <summary>
+    /// Gibt zurück ob der Spieler an einem Kontrollpunkt ist.
+    /// </summary>
+    /// <returns>True oder false</returns>
     public static bool PlayerAtCtrlPoint()
     {
         return _runMode == RunMode.Idle && _gameModus;
     }
 
+    /// <summary>
+    /// Gibt das aktuelle Item im Inventar zurück.
+    /// </summary>
+    /// <returns>Item</returns>
     public static GameObject GetInventoryItem()
     {
         return InventoryHandler.GetInventoryItem();
     }
 
+    /// <summary>
+    /// Gibt den aktuellen Namen der Szene zurück.
+    /// </summary>
+    /// <returns></returns>
     public static String GetActualSceneName()
     {
         return SceneManager.GetActiveScene().name;
     }
 
+    /// <summary>
+    /// Startet das Spiel und setzt den Spielmodus.
+    /// </summary>
     private static void StartGameAndChangeMode()
     {
         SetGameModus(true);
     }
 
+    /// <summary>
+    /// Stoppt das Spiel und setzt den Spielmodus.
+    /// </summary>
     private static void StopGameAndChangeMode()
     {
         SetGameModus(false);
     }
 
+    /// <summary>
+    /// Setzt den Spielmodus, wenn der Spieler im Tutorial ein Hinderniss trifft.
+    /// </summary>
+    /// <param name="pos">Position des Spielers</param>
     private static void PlayerHitTutorialObstacle(float pos)
     {
         SetRunMode(RunMode.Idle);
     }
 
+    /// <summary>
+    /// Startet eine Coroutine in der 
+    /// </summary>
     private void StartDeleteVrStuff()
     {
         StartCoroutine(DeleteVrStuff());
     }
     
+    /// <summary>
+    /// Coroutine, die die VR Komponenten der Szene löscht.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator DeleteVrStuff()
     {
         yield return new WaitForSeconds(0.7f);

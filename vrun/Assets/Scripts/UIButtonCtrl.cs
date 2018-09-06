@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Klasse, die die Boundingbox des UI-Buttons definiert und validiert.
+/// </summary>
 [RequireComponent(typeof(RectTransform))]
 public class UiButtonCtrl: MonoBehaviour
 {

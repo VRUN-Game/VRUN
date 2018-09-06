@@ -63,13 +63,13 @@ public class PlayerstatsUIHandler : MonoBehaviour {
 		var plyrScore = ScoreHandler.GetPlayerScore();
 		
 		// Setze die Punktzahl, wenn der Spieler nicht in der HomeScene ist
-		if (SceneManager.GetActiveScene().name != "HomeScene")
+		if (GlobalDataHandler.GetActualSceneName() != "HomeScene")
 		{
 			_scoreLabel.text = plyrScore <= 0 ? "0" : plyrScore.ToString();
         }
 		
 		// Zeige die UI Elemente an, wenn der Spieler in einem Level ist 
-        if (SceneManager.GetActiveScene().name != "Tutorial" && _scoreUi != null && _timerUi != null)
+        if (GlobalDataHandler.GetActualSceneName() != "Tutorial" && _scoreUi != null && _timerUi != null)
         {
          	_scoreUi.SetActive(GlobalDataHandler.GetGameModus());
             _timerUi.SetActive(GlobalDataHandler.GetGameModus());
@@ -81,7 +81,7 @@ public class PlayerstatsUIHandler : MonoBehaviour {
 	/// </summary>
 	private void DisplayPlayerStatsAndInventory()
 	{
-        if (SceneManager.GetActiveScene().name != "Tutorial")
+        if (GlobalDataHandler.GetActualSceneName() != "Tutorial")
         {
             DisplayScore();
             DisplayTimer();

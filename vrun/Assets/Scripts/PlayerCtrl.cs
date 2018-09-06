@@ -71,7 +71,7 @@ public class PlayerCtrl : MonoBehaviour
             _inputs.z = IsPlayerOnTrack() ? 1 : 0;
             
             // Erhöhe die Spielergeschwindigkeit beim Erreichen eines Meilensteins
-            if (!SceneManager.GetActiveScene().name.Contains("Tutorial") && 
+            if (!GlobalDataHandler.GetActualSceneName().Contains("Tutorial") && 
                 GlobalDataHandler.GetPlayerPosition() >= GlobalDataHandler.GetNextMilestone())
             {
                 EventManager.IncreaseSpeedAndMilestone();
@@ -180,8 +180,8 @@ public class PlayerCtrl : MonoBehaviour
     /// </summary>
     private void ResetPlyrPositionAndPastDistanceForNextLevel()
     {
-        if (_body == null || SceneManager.GetActiveScene().name == "HomeScene" 
-            || SceneManager.GetActiveScene().name == "Tutorial") return;
+        if (_body == null || GlobalDataHandler.GetActualSceneName() == "HomeScene" 
+            || GlobalDataHandler.GetActualSceneName() == "Tutorial") return;
         _body.position = new Vector3(_body.position.x, _body.position.y, 0);
         _pastDistance = 0;
 

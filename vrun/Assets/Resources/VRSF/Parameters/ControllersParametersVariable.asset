@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   ColorMatOffLeft: {r: 1, g: 0, b: 0, a: 1}
   ColorMatSelectableLeft: {r: 0, g: 1, b: 0, a: 1}
   MaxDistancePointerLeft: 1000
-  UsePointerRight: 0
+  UsePointerRight: 1
   RightPointerState: 0
   RightExclusionLayer:
     serializedVersion: 2

@@ -6,7 +6,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="MirrorScript.cs" t="Include" />
         <e p="Oculus" t="Include">
           <e p="VR" t="Include">
             <e p="Editor" t="Include">
@@ -193,15 +192,12 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AnimationCtrl.cs" t="Include" />
           <e p="CheckUsersHeight.cs" t="Include" />
-          <e p="Controller_Milestone.cs" t="Include" />
           <e p="ControllerCollider.cs" t="Include" />
           <e p="CtrlPointHandler.cs" t="Include" />
           <e p="DecorationCtrl.cs" t="Include" />
           <e p="DisplayCtrl.cs" t="Include" />
           <e p="EventManager.cs" t="Include" />
-          <e p="FreezeRotation.cs" t="Include" />
           <e p="GeneralSpawner.cs" t="Include" />
           <e p="GlobalDataHandler.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
@@ -215,7 +211,7 @@
             <e p="MeshGenerator.cs" t="Include" />
             <e p="NoiseGenerator.cs" t="Include" />
           </e>
-          <e p="MilestoneSpawner.cs" t="Include" />
+          <e p="ObjectList.cs" t="Include" />
           <e p="Objects" t="Include">
             <e p="Controller" t="Include">
               <e p="ControllerItem.cs" t="Include" />
@@ -224,19 +220,6 @@
               <e p="ControllerTunnel.cs" t="Include" />
               <e p="PointController.cs" t="Include" />
             </e>
-            <e p="ObjectHandler.cs" t="Include" />
-            <e p="ObjectList.cs" t="Include" />
-            <e p="Spawner" t="Include">
-              <e p="ItemSpawner.cs" t="Include" />
-              <e p="Obstacle1Spawner.cs" t="Include" />
-              <e p="Obstacle2Spawner.cs" t="Include" />
-              <e p="Obstacle3Spawner.cs" t="Include" />
-              <e p="Obstacle4Spawner.cs" t="Include" />
-              <e p="PointSpawner.cs" t="Include" />
-              <e p="PortalSpawner.cs" t="Include" />
-              <e p="TunnelSpawner.cs" t="Include" />
-            </e>
-            <e p="SpawnObjectHandler.cs" t="Include" />
           </e>
           <e p="PlayerCollider.cs" t="Include" />
           <e p="PlayerCtrl.cs" t="Include" />
@@ -244,7 +227,6 @@
           <e p="ScoreHandler.cs" t="Include" />
           <e p="ScoreTableCtrl.cs" t="Include" />
           <e p="SoundCtrl.cs" t="Include" />
-          <e p="TimeController.cs" t="Include" />
           <e p="TimerRef.cs" t="Include" />
           <e p="TrackCtrl.cs" t="Include" />
           <e p="TransitionCtrl.cs" t="Include" />
